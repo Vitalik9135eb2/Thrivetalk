@@ -1,0 +1,95 @@
+// main: ./../main.less
+
+.about{
+    display: grid;
+    grid-template-rows: 1fr 120px 360px 120px;
+    grid-template-columns: repeat(4, 25%);
+
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #22356F;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    &__text{
+        width: 590px;
+        font-weight: 700;
+        color: #22356F;
+        grid-area: 1/2/2/5;
+        line-height: 34px;
+        font-size: 24px;
+        margin: 150px 0 0 125px;
+    }
+
+    &__span{
+        grid-area: 2/1/3/5;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        font-size: 16px;
+        color: #22356F;
+    }
+
+    &__item{
+        display: flex;
+        justify-content: center;
+        padding: 95px 0 0 0;
+        
+
+
+        &-span{
+            font-size: 32px;
+            line-height: 34px;
+            letter-spacing: -0.006em;
+            color: #fff;
+            position: relative;
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 252px;
+                height: .5px;
+                top: -23px;
+                left: -30px;
+                background-color: #fff;
+            }
+            &::after{
+                content: " ";
+                position: absolute;
+                background-image: url(".././img/Ellipse.svg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 9px;
+                height: 9px;
+                top: 14px;
+                left: -22px;
+            }
+
+
+        }
+    }
+
+  
+    
+    
+}
+
+.weight{
+    background-color:#FFE2DE;
+
+}
+.running{
+    background-color:#C4E769;
+
+}
+.pumping{
+    background-color:#62D0DF;
+
+}
+.iron{
+    background-color: #0052C1;
+}
+

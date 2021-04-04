@@ -1,0 +1,74 @@
+// main: ./../main.less
+
+
+.blog{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 480px 1fr 480px;
+
+    &__img-top{
+        grid-area: 1/1/2/2;
+    }
+
+    &__content-top{
+        grid-area: 1/2/2/4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__span-top{
+        margin: 103px 0 0 110px;
+        color: #22356F;
+    }
+    &__text{
+        max-width: 675px;
+        font-size: 36px;
+        line-height: 1.55;
+        margin-left: 110px;
+        color: #22356F;
+        font-weight: 900;
+    }
+    &__link{
+        color: #62D0DF;
+    }
+    &__span--yellow{
+        margin: 0 0 45px 110px;
+        color: #FAB63E;
+
+    }
+
+    &__content-bottom{
+        grid-area: 2/1/3/3;
+        background-color: #22356F;
+        display: flex;
+        flex-direction: column;
+    }
+    &__span--white{
+        margin: 105px 0 0 180px;
+        color: #fff;
+    }
+    &__title{
+        margin: 230px 0 0 180px;
+        color: #fff;
+        font-size: 64px;
+
+    }
+    &__text-bottom{
+        margin: 75px 0 60px 180px;
+        font-size: 36px;
+        line-height: 1.5;
+        color: #fff;
+        max-width: 580px;
+    }
+    &__span--blue{
+        margin: 0 0 42px 180px;
+        color:  #62D0DF;
+        font-size: 16px;
+        
+
+    }
+
+    &__img-bottom{
+        grid-area: 2/3/3/4;
+    }
+}

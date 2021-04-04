@@ -1,0 +1,104 @@
+// main: ./../main.less
+
+
+
+.services{
+    display: grid;
+    grid-template-rows: 480px 480px 22px 1fr 1fr 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &__physical{
+        background-color: #22356F;
+    }
+    &__mental{
+        background-color: #0052C1;
+    }
+    &__nytrion{
+        background-image: url(".././img/cardImg.svg");
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    &__gumnastic{
+        background-color: #62D0DF;
+    }
+    &__crossfit{
+        background-color: #DEE1FF;
+    }
+    &__aerobics{
+        background-color: #8F00FF;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__title{
+        margin: 55px 140px 0 105px;
+        font-size: 28px;
+        color: #22356F;
+        
+    }
+    &__text{
+        max-width: 300px;
+        margin: 28px 77px 37px 105px;
+        
+        line-height: 25px;
+    }
+
+    &__span{
+        font-size: 32px;
+        line-height: 1.4;
+        letter-spacing: -0.006em;
+        color: #fff;
+        position: relative;
+        display: block;
+        width: 152px;
+        margin: 125px 220px 0 105px;
+        font-weight: 900;
+        &::before{
+            content: " ";
+            position: absolute;
+            width: 490px;
+            height: 1px;
+            top: -35px;
+            left: -30px;
+            background-color: #fff;
+        }
+        &::after{
+            content: " ";
+            position: absolute;
+            background-image: url(".././img/Ellipse.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 13px;
+            height: 13px;
+            top: 16px;
+            left: -33px;
+        }
+
+
+    }
+
+
+    &__plans{
+        grid-area: 4/1/5/2;
+    }
+    &__loss{
+        grid-area: 4/2/5/3;
+    }
+    &__peace{
+        grid-area: 4/3/5/4;
+    }
+    &__training{
+        grid-area: 5/1/6/2;
+    }
+    &__work{
+        grid-area: 5/2/6/3;
+    }
+    &__cardio{
+        grid-area: 5/3/6/4;
+    }
+  
+}
+
