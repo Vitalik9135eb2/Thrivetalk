@@ -29,8 +29,8 @@
     }
 
     &__card{
-        display: flex;
-        flex-direction: column;
+        .flexColumn();
+        .flex();
         
     }
     &__title{
@@ -54,15 +54,15 @@
         position: relative;
         display: block;
         width: 152px;
-        margin: 125px 220px 0 105px;
+        margin:0 80px 100px 0;
         font-weight: 900;
         &::before{
             content: " ";
             position: absolute;
-            width: 490px;
+            width: 310px;
             height: 1px;
             top: -35px;
-            left: -30px;
+            left: -55px;
             background-color: #fff;
         }
         &::after{

@@ -3,32 +3,35 @@
 .thrive{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 555px;
+    grid-template-columns: 1fr auto;
+    background-color: #62D0DF;
 
     &__content{
-        background-color: #62D0DF;
-        display: flex;
-        flex-direction: column;
-       
-
+        
+        .flexColumn();
+        .flex();
     }
+
+    &__wrap{
+        .flexColumn();
+    }
+
     &__title{
         font-size: 36px;
         color: #fff;
-        margin: 150px 0 75px 180px;
+        // margin: 150px 0 0 180px;
     }
 
     &__text{
         max-width: 555px;
         font-size: 24px;
         line-height: 35px;
-        margin-left: 180px;
+        // margin-left: 180px;
         color: #FFFFFF;
     }
 
     &__img{
-        width: 100%;
-        height: 100%;
+        max-width: 555px;
         grid-area: 1/2/2/3;
         
     }
