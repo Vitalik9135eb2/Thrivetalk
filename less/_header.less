@@ -28,10 +28,23 @@
     &__top{
         .flex(space-between, flex-end);        
         margin-top: 30px;
-        @media (max-width: 767px){
-            display: none;
+        transition: .4s;
+        @media (max-width: 768px){
+            position: fixed;
+            top: -3000px;
+            height: 100vh;
+            left: 0;
+            right: 0;
+            background-color: #666563;
+            z-index: 9999;
+            flex-direction: column;
+            .flex(flex-start, center);   
+            padding-top: 70px;
         }
         
+    }
+    &__top.active{
+        top: -30px;
     }
     &__logo{
         font-size: 27px;
@@ -48,10 +61,17 @@
             margin-left: 40px;
             font-size: 22px;
         }
+        @media (max-width: 768px){
+            margin: 0;
+            font-size: 30px;
+        }
 
     }
     &__list{
         display: flex;
+        @media (max-width: 768px){
+            margin-top: 40px;
+        }
         &-item{
             margin-right: 20px;
             color: #22356F;
@@ -68,6 +88,16 @@
             }
             @media (max-width: 1400px){
                 font-size: 12px;
+            }
+
+            @media (max-width: 768px){
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        &-link{
+            @media (max-width: 768px){
+                color: #fdfdfd;
             }
         }
     }
@@ -97,6 +127,12 @@
             font-size: 10px;
             transform: translate(45px, 6px);
         }
+        @media (max-width: 768px){
+            transform: translate(0, 60px);
+            width: 120px;
+            padding: 15px 20px ;
+            font-size: 12px;
+        }
     }
 
     &__burger-btn{
@@ -104,10 +140,12 @@
         width: 22px;
         height: 2px;
         background-color:#000105;
-        position: absolute;
+        position: fixed;
         top: 25px;
         right: 50px;
         z-index: 99999999999;
+        cursor: pointer;
+        transition: .1s;
         &::before{
             content: '';
             position: absolute;
@@ -126,11 +164,27 @@
             z-index: 99999999999;
             top: -8px;
         }
+        
         @media (max-width: 767px){
             display: block;
         }
         @media (max-width: 576px){
             right: 30px;
+        }
+    }
+    &__burger-btn.active{
+        transform: rotate(45deg);
+        width: 26px;
+        background-color:#fd0707;
+        &::before{
+            width: 26px;
+            top: 1px;
+            left: 0;
+            transform: rotate(90deg);
+            background-color:#fd0707;
+        }
+        &::after{
+            display: none;
         }
     }
 
